@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="All Test Suite">
+    <test thread-count="5" preserve-order="true" name="failedCase">
+<groups>
+    <run>
+        <include name="errorHandling"/>
+    </run>
+</groups>
+        <classes>
+            <class name="Ecommerce.FailedCaseTest"/>
+            <class name="Ecommerce.LoginTest"/>
+        </classes>
+    </test>
+</suite>
