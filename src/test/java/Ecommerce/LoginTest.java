@@ -28,6 +28,7 @@ public class LoginTest extends BaseTest{
     String country = "India";
     @Test(dataProvider = "getData",groups = "purchase",retryAnalyzer = Retry.class)
     public void ecommerceE2E(HashMap<String,String>input) {
+        System.out.println("login page");
         ProductCataloguePage productCataloguePage = landingPage.enterUserNameNPassword(input.get("email"), input.get("password"));
         productCataloguePage.getProductsList();
         productCataloguePage.getProductName(input.get("productName"));
