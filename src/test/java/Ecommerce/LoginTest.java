@@ -34,7 +34,7 @@ public class LoginTest extends BaseTest{
         productCataloguePage.getProductName(input.get("productName"));
         productCataloguePage.addToCart(input.get("productName"));
         CartPage cartPage = productCataloguePage.clickOnCart();
-        System.out.println("cart Page");
+
         cartPage.getCartProductNames();
         Boolean match = cartPage.verifyCartProductNames(input.get("productName"));
         Assert.assertTrue(match);
